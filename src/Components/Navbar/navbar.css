@@ -1,0 +1,142 @@
+.navbar {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.item {
+  position: relative;
+}
+.item > .link::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+
+  transition: all 0.5s ease-in-out;
+}
+.item:hover .link::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.right {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navbar .right .icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  color: #222;
+}
+
+.person {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.person:hover .Box {
+  display: block;
+}
+
+.Box {
+  display: none;
+  position: absolute;
+  width: 260px;
+  left: -230px;
+  top: 25px;
+  background-color: #fff;
+  z-index: 12;
+  padding: 25px;
+}
+.Box .loginBtn {
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.Box .loginBtn:hover {
+  background-color: #444444;
+}
+.Box p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.Box p span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.Box .logoutbtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #222;
+  cursor: pointer;
+}
+
+.cartIcon {
+  position: relative;
+  display: flex;
+}
+
+.cartIcon span {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+}
+
+.right > .link {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  .center {
+    width: 100%;
+    gap: 5px 25px;
+    flex-wrap: wrap;
+    padding: 0px 25px;
+  }
+}

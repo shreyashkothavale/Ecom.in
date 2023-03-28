@@ -1,0 +1,12 @@
+.allProducts > .bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .allProducts > .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,12 @@
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumb-links > .link {
+  font-size: 12px;
+}
+
+.teal:hover {
+  color: teal;
+}

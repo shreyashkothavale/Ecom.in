@@ -63,7 +63,13 @@ function SignUp({ setIsLogin }) {
           users.push(signUpInfo);
           localStorage.setItem("users", JSON.stringify(users));
           setSuccess(true);
-          window.location.reload();
+          setSignUpInfo({
+            userId: Date.now() + Math.random() * 100,
+            firstname: "",
+            lastname: "",
+            email: "",
+            password: "",
+          });
           setTimeout(() => {
             setSuccess(false);
           }, 2000);
@@ -71,7 +77,13 @@ function SignUp({ setIsLogin }) {
       } else {
         localStorage.setItem("users", JSON.stringify([signUpInfo]));
         setSuccess(true);
-        window.location.reload();
+        setSignUpInfo({
+          userId: Date.now() + Math.random() * 100,
+          firstname: "",
+          lastname: "",
+          email: "",
+          password: "",
+        });
         setTimeout(() => {
           setSuccess(false);
         }, 2000);

@@ -16,13 +16,13 @@ function AllProducts({ type }) {
     setScreenWidth(window.innerWidth);
     if (arrUrl[1] !== undefined) {
       let filterData = ProductData.filter((item) => item.category == arrUrl[1]);
-      console.log(filterData);
+      // console.log(filterData);
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
         setProdData(filterData);
       }, 1000);
-      console.log(arrUrl);
+      // console.log(arrUrl);
     } else {
       setIsLoading(true);
       setTimeout(() => {

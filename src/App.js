@@ -96,7 +96,8 @@ const router = createBrowserRouter([
       </ProtectedRoute>
     ),
   },
-]);
+],
+{ basename: '/Ecom.in' });
 
 function App() {
   return (
